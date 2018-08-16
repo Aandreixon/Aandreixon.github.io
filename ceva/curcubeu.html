@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
+<style>
+body {
+    background-color: lightblue;
+}
+</style>
 
 <h1 id="txt" style="font-size: 500%; text-align: center">CURCUBEU</h1>
 
@@ -18,7 +23,7 @@ function color() {
     var col="#"+c()+c()+c();
     var bac="#"+c()+c()+c();
     document.getElementById('txt').style.color=col;
-    document.getElementById('txt').style.background=bac;
+    //document.getElementById('txt').style.background=bac;
     setTimeout(loop, 500/3);
 }
 loop();
