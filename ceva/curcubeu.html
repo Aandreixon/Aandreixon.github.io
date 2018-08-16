@@ -2,7 +2,27 @@
 <html>
 <body>
 
-<p>CURCUBEU</p>
+<h1 id="txt" style="font-size: 500%; text-align: center">CURCUBEU</h1>
+
+<p id="demo"></p>
+
+<script>
+function loop() {
+	setTimeout(color, 500/3);
+}
+function color() {
+	function c() {
+		var hex = Math.floor(Math.random()*256).toString(16);
+		return ("0"+String(hex)).substr(-2);
+    }
+    var col="#"+c()+c()+c();
+    var bac="#"+c()+c()+c();
+    document.getElementById('txt').style.color=col;
+    document.getElementById('txt').style.background=bac;
+    setTimeout(loop, 500/3);
+}
+loop();
+</script>
 
 </body>
 </html>
