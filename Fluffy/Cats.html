@@ -5,18 +5,9 @@
 body {
 	background-image: url(https://i.imgur.com/ApSsg4d.jpg);
 }
-.credite {
-	color: #00D030;
-	font-size: 16px;
-	position:absolute;
-	bottom:0;
-	right:0;
-}
 </style>
 </head>
 <body>
-
-<p class="credite">Made by Aandreixon#0000</p>
 
 <script>
 var poze=['https://i.imgur.com/ApSsg4d.jpg','https://i.imgur.com/KmUjINE.jpg','https://i.imgur.com/clS43zg.jpg','https://i.imgur.com/pucvaq7.jpg','https://i.imgur.com/Qu09fzE.jpg',
@@ -26,7 +17,8 @@ function backgroundchange() {
 	fundal = "url("+poze[poza]+")"
 	document.body.style.backgroundImage = fundal;
 }
-setInterval(backgroundchange,2000)
+backgroundchange()
+setInterval(backgroundchange,1500)
 </script>
 
 </body>
