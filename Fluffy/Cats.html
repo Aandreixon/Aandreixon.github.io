@@ -3,7 +3,6 @@
 <head>
 <style>
 body {
-    //background-image: url(Andrei/Fluffy/1.jpg);
 	background-image: url(https://i.imgur.com/ApSsg4d.jpg);
 }
 .credite {
@@ -20,13 +19,14 @@ body {
 <p class="credite">Made by Aandreixon#0000</p>
 
 <script>
-nrpoze=8
-//function backgroundchange() {
-//	poza = Math.floor(Math.random() * nrpoze)+1;
-//	fundal = "url(Andrei/Fluffy/"+poza+".jpg)"
-//	document.body.style.backgroundImage = fundal;
-//}
-//setInterval(backgroundchange,2000)
+var poze=['https://i.imgur.com/ApSsg4d.jpg','https://i.imgur.com/KmUjINE.jpg','https://i.imgur.com/clS43zg.jpg','https://i.imgur.com/pucvaq7.jpg','https://i.imgur.com/Qu09fzE.jpg',
+'https://i.imgur.com/WCOkDOI.jpg','https://i.imgur.com/41mYeS4.jpg','https://i.imgur.com/JCBkKin.jpg']
+function backgroundchange() {
+	poza = Math.floor((Math.random() * poze.length) + 0);
+	fundal = "url("+poze[poza]+")"
+	document.body.style.backgroundImage = fundal;
+}
+setInterval(backgroundchange,2000)
 </script>
 
 </body>
