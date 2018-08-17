@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-image: url(Andrei/Fluffy/1.jpg);
+}
+.credite {
+	color: #00D030;
+	font-size: 16px;
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+</style>
+</head>
+<body>
+
+<p class="credite">Made by Aandreixon#0000</p>
+
+<script>
+nrpoze=8
+function backgroundchange() {
+	poza = Math.floor(Math.random() * nrpoze)+1;
+	fundal = "url(Andrei/Fluffy/"+poza+".jpg)"
+	document.body.style.backgroundImage = fundal;
+}
+setInterval(backgroundchange,2000)
+</script>
+
+</body>
+</html>
