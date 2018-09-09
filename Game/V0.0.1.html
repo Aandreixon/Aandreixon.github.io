@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+
+</script>
+
+<style>
+img {
+	display:none
+}
+
+</style>
+
+</head>
+<body>
+
+<canvas id="canvas" width="1280" height="720"></canvas>
+
+<script>
+//canvas definitions
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext("2d");
+//canvas background
+const img = new Image();
+img.src = "image/bgr.jpg";
+img.onload = function () {
+	context.drawImage(img,0,0);
+}
+//canvas clear function
+function clear() {
+	context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+
+
+//canvas reload
+setTimeout(clear,2000);
+</script>
+
+</body>
+</html>
