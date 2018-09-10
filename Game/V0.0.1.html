@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<title>Game</title>
+<link rel="icon" href="image/spaceship.png">
 <script>
 
 
 </script>
 
 <style>
-img {
-	display:none
-}
+
 
 </style>
 
 </head>
 <body>
 
+<!--canvas-->
 <canvas id="canvas" width="1280" height="720"></canvas>
+<input id="cartof" type="text" name="cartof" value="">
+<button onclick="ok()">Trimite</button>
+<button onclick="dm()">Scoate</button>
+<p id="ceva"></p>
 
 <script>
+function ok() {
+	localStorage.setItem('test2', document.getElementById('cartof').value);
+}
+function dm() {
+	var altceva = localStorage.getItem('test');
+	document.getElementById('ceva').innerHTML=altceva;
+}
+//map size
+const mapX=12800
+const mapY=7200
+const startX=6400
+const startY=3600
 //canvas definitions
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext("2d");
@@ -37,7 +53,10 @@ function clear() {
 
 
 //canvas reload
-setTimeout(clear,2000);
+function reload() {
+	
+}
+setTimeout(reload,1000/60);
 </script>
 
 </body>
