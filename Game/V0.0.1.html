@@ -18,19 +18,8 @@
 
 <!--canvas-->
 <canvas id="canvas" width="1280" height="720"></canvas>
-<input id="cartof" type="text" name="cartof" value="">
-<button onclick="ok()">Trimite</button>
-<button onclick="dm()">Scoate</button>
-<p id="ceva"></p>
 
 <script>
-function ok() {
-	localStorage.setItem('test2', document.getElementById('cartof').value);
-}
-function dm() {
-	var altceva = localStorage.getItem('test');
-	document.getElementById('ceva').innerHTML=altceva;
-}
 //map size
 const mapX=12800
 const mapY=7200
