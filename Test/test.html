@@ -3,19 +3,22 @@
 <head></head>
 <body>
 
-<p>TEST1</p>
-<input type="text" id='input1'>
-<button id='buton1' onclick='trimite()'>trimite</button>
+<p id='scor'></p>
+<button id='buton1' onclick='+1()'>trimite</button>
 
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 <script>
-var text="test2"
-var test1="test3"
-function trimite() {
-	firebase.database().ref('users/' + text).set({
-	testname: test1
-	});
+var scor=firebase.database().ref('scor');
+function scor() {
+	document.getElementById('scor').innerHTML=scor;
 }
+function scorUpdate() 
+	scor=scor+1
+	scor()
+	firebase.database().ref('scor').set({scor});
+}
+
+scor()
 // Initialize Firebase
 var config = {
 	apiKey: "AIzaSyA6UlLiDp5uhVCe5iS2Zt_Cb-2umRjkKcI",
