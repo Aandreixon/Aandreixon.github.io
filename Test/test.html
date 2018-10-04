@@ -3,8 +3,8 @@
 <head></head>
 <body>
 
-<p id='scor'></p>
-<button id='buton1' onclick='scorUpdate()'>trimite</button>
+<p id="scor"></p>
+<button id="buton1" type="button" onclick="scorUpdate()">trimite</button>
 
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 <script>
@@ -12,7 +12,7 @@
 function scor() {
 	document.getElementById('scor').innerHTML=scor;
 }
-function scorUpdate() 
+function scorUpdate() {
 	scor=scor+1
 	scor()
 	firebase.database().ref('scor').set({scor});
