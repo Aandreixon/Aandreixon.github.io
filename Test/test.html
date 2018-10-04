@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+<script>
+// Get a key for a new Post.
+//var newPostKey = firebase.database().ref().child('scor').push().key;
+// Initialize Firebase
+var config = {
+	apiKey: "AIzaSyA6UlLiDp5uhVCe5iS2Zt_Cb-2umRjkKcI",
+	authDomain: "my-first-test-project-7eba2.firebaseapp.com",
+	databaseURL: "https://my-first-test-project-7eba2.firebaseio.com",
+	projectId: "my-first-test-project-7eba2",
+	storageBucket: "",
+	messagingSenderId: "145869197252"
+	};
+firebase.initializeApp(config);
+var database = firebase.database();
+</script>
+</head>
 <body>
 
 <p id="scor"></p>
@@ -18,39 +34,6 @@ function scorUpdate() {
 	document.getElementById('scor').innerHTML=scor;
 	firebase.database().ref('scor').set({scor});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Get a key for a new Post.
-//var newPostKey = firebase.database().ref().child('scor').push().key;
-// Initialize Firebase
-var config = {
-	apiKey: "AIzaSyA6UlLiDp5uhVCe5iS2Zt_Cb-2umRjkKcI",
-	authDomain: "my-first-test-project-7eba2.firebaseapp.com",
-	databaseURL: "https://my-first-test-project-7eba2.firebaseio.com",
-	projectId: "my-first-test-project-7eba2",
-	storageBucket: "",
-	messagingSenderId: "145869197252"
-	};
-firebase.initializeApp(config);
-var database = firebase.database();
 </script>
 
 </body>
