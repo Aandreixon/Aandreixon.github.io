@@ -8,7 +8,7 @@
 
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 <script>
-var scor=firebase.database().ref('scor');
+//var scor=firebase.database().ref('scor');
 function scor() {
 	document.getElementById('scor').innerHTML=scor;
 }
@@ -17,14 +17,26 @@ function scorUpdate()
 	scor()
 	firebase.database().ref('scor').set({scor});
 }
-scor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Get a key for a new Post.
 var newPostKey = firebase.database().ref().child('scor').push().key;
-// Write the new post's data simultaneously in the posts list and the user's post list.
-var updates = {};
-updates['scor']=scor;
-return firebase.database().ref().update(updates);
-
 // Initialize Firebase
 var config = {
 	apiKey: "AIzaSyA6UlLiDp5uhVCe5iS2Zt_Cb-2umRjkKcI",
