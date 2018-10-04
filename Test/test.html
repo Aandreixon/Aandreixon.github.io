@@ -9,12 +9,13 @@
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 <script>
 //var scor=firebase.database().ref('scor');
-function scor() {
-	document.getElementById('scor').innerHTML=scor;
-}
+firebase.database().ref('scor').on('value', function(snapshot) {
+	updatescor(snaphot.val());
+});
+var scor=
 function scorUpdate() {
 	scor=scor+1
-	scor()
+	document.getElementById('scor').innerHTML=scor;
 	firebase.database().ref('scor').set({scor});
 }
 
@@ -34,9 +35,11 @@ function scorUpdate() {
 
 
 
+
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Get a key for a new Post.
-var newPostKey = firebase.database().ref().child('scor').push().key;
+//var newPostKey = firebase.database().ref().child('scor').push().key;
 // Initialize Firebase
 var config = {
 	apiKey: "AIzaSyA6UlLiDp5uhVCe5iS2Zt_Cb-2umRjkKcI",
