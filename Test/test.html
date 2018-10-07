@@ -20,7 +20,7 @@ var database = firebase.database();
 <body>
 
 <p id="scor"></p>
-<button id="buton1" type="button" onclick="scorUpdate()">trimite</button>
+<button id="buton1" type="button" onclick="scorUp()">trimite</button>
 
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 <script>
@@ -28,11 +28,11 @@ var database = firebase.database();
 firebase.database().ref('scor').on('value', function(snapshot) {
 	updatescor(snaphot.val());
 });
-var scor=
-function scorUpdate() {
-	scor=scor+1
-	document.getElementById('scor').innerHTML=scor;
-	firebase.database().ref('scor').set({scor});
+//var scor=
+function scorUp() {
+	//scor=scor+1
+	//document.getElementById('scor').innerHTML=scor;
+	//firebase.database().ref('scor').set({scor});
 }
 </script>
 
