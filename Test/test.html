@@ -3,7 +3,6 @@
 <head>
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 <script>
-var database = firebase.database();
 // Get a key for a new Post.
 //var newPostKey = firebase.database().ref().child('scor').push().key;
 // Initialize Firebase
@@ -16,6 +15,7 @@ var config = {
 	messagingSenderId: "145869197252"
 	};
 firebase.initializeApp(config);
+var database = firebase.database();
 </script>
 </head>
 <body>
