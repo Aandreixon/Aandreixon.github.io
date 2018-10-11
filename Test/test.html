@@ -40,7 +40,7 @@ function scorUp() {
 	scor=scor+1
 	//dbRef2.set(scor);
 	updates[dbRef2]=scor;
-	firebase.database().ref().update();
+	firebase.database().ref().update(updates);
 }
 </script>
 
