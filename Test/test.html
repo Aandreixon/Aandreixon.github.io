@@ -23,23 +23,24 @@ var config = {
 };
 firebase.initializeApp(config);
 
+//update text from database
 var ceva = document.getElementById('ceva');
 var dbRef = firebase.database().ref().child('text');
 dbRef.on('value', snap => ceva.innerText = snap.val());
-// Get a key for a new Post.
-//var newPostKey = firebase.database().ref().child('scor').push().key;
-//---------------------------------------------------------------------------
+
+//scor update
 var scorT=document.getElementById('scor');
 var dbRef2 = firebase.database().ref().child('scor');
-dbRef2.on('value', snap => scorT.innerText = snap.val());
-//var scor=firebase.database().ref('scor');
-//firebase.database().ref('scor').on('value', function(snapshot) {
-//updatescor(snaphot.val());
-//});
-//var scor=
+//dbRef2.on('value', snap => scorT.innerText = snap.val());
+var newPostKey = firebase.database().ref().child('scor').push().key;
+var updates = {};
+
+//scor+1
 function scorUp() {
 	scor=scor+1
-	dbRef2.set(scor);
+	//dbRef2.set(scor);
+	updates[dbRef2]=scor;
+	firebase.database().ref().update();
 }
 </script>
 
