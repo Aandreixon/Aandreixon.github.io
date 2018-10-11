@@ -38,7 +38,7 @@ dbRef2.on('value', snap => scor.innerText = snap.val());
 //var scor=
 function scorUp() {
 	scor=scor+1
-	firebase.database().ref().childZ('scor')set(scor);
+	dbRef2.set(scor);
 }
 </script>
 
