@@ -29,8 +29,9 @@ dbRef.on('value', snap => ceva.innerText = snap.val());
 // Get a key for a new Post.
 //var newPostKey = firebase.database().ref().child('scor').push().key;
 //---------------------------------------------------------------------------
+var scorT=document.getElementById('scor');
 var dbRef2 = firebase.database().ref().child('scor');
-dbRef2.on('value', snap => scor.innerText = snap.val());
+dbRef2.on('value', snap => scorT.innerText = snap.val());
 //var scor=firebase.database().ref('scor');
 //firebase.database().ref('scor').on('value', function(snapshot) {
 //updatescor(snaphot.val());
