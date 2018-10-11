@@ -29,7 +29,7 @@ var dbRef = firebase.database().ref().child('text');
 dbRef.on('value', snap => ceva.innerText = snap.val());
 
 //scor update
-var scor=number(firebase.database().ref().child('scor').value);
+var scor=Number(firebase.database().ref().child('scor').value);
 var scorT=document.getElementById('scor');
 var dbRef2 = firebase.database().ref().child('scor');
 //dbRef2.on('value', snap => scorT.innerText = snap.val());
