@@ -7,7 +7,8 @@
 
 <h1 id="ceva"></h1>
 
-<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-database.js"></script>
 <script>
 // Initialize Firebase
 var config = {
@@ -21,8 +22,8 @@ var config = {
 firebase.initializeApp(config);
 
 var ceva=document.getElementById('ceva');
-var dbRef=firebase.databse().ref().child('text');
-dbRef.on('value',snap => ceva.innerText=snap.val());
+//var dbRef=firebase.databse().ref().child('text');
+//dbRef.on('value',snap => ceva.innerText=snap.val());
 </script>
 <script>
 // Get a key for a new Post.
