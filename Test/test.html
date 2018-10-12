@@ -6,7 +6,7 @@
 <body>
 
 <h1 id="ceva"></h1>
-<p id='scor'></p>
+<p id="scor"></p>
 <button type="button" onclick='scorUp()'></button>
 
 <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
@@ -40,7 +40,8 @@ var updates = {};
 
 //scor+1
 function scorUp() {
-	scor=scor+1
+	scor=scor+1;
+	scorT.innerHtml=scor;
 	//dbRef2.set(scor);
 	//updates[dbRef2]=scor;
 	updates[newPostKey] = scor;
