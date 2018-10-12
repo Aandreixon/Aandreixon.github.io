@@ -29,12 +29,13 @@ var dbRef = firebase.database().ref().child('text');
 dbRef.on('value', snap => ceva.innerText = snap.val());
 
 //scor update
-var a=firebase.database().ref().child('scor').value;
-var scor=Number(a)
-var scorT=document.getElementById('scor');
 var dbRef2 = firebase.database().ref().child('scor');
-//dbRef2.on('value', snap => scorT.innerText = snap.val());
-var newPostKey = firebase.database().ref().child('scor').push().key;
+var scor
+dbRef2.on('value', function(snapshot) {
+  scor=snapshot.val();
+});
+var scorT=document.getElementById('scor');
+var newPostKey = dbRef2.push().key;
 var updates = {};
 
 //scor+1
