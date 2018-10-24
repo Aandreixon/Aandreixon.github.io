@@ -2,13 +2,6 @@
 <html>
 <head>
 <meta charset="utf-8"> 
-</head>
-<body>
-
-<h1 id="ceva"></h1>
-<p id="scor"></p>
-<button type="button" onclick='scorUp()'></button>
-
 <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-database.js"></script>
 <script>
@@ -22,21 +15,27 @@ var config = {
 	messagingSenderId: "145869197252"
 };
 firebase.initializeApp(config);
+</script>
+</head>
+<body>
+
+<h1 id="test"></h1>
+<p id="scor"></p>
+<button type="button" onclick='scorUp()'>+1</button>
+
 
 //update text from database
-var ceva = document.getElementById('ceva');
+var test = document.getElementById('test');
 var dbRef = firebase.database().ref().child('text');
-dbRef.on('value', snap => ceva.innerText = snap.val());
+dbRef.on('value', snap => test.innerText = snap.val());
 
 //scor update
 var scorT=document.getElementById('scor');
 var dbRef2 = firebase.database().ref().child('scor');
-var scor;
-dbRef2.on('value', snap2 => scorT.innerText=snap2.val());
+dbRef2.on('value', snap2 => scor.val());
 //var newPostKey = dbRef2.push().key;
 //var updates = {};
 
-//scor+1
 function scorUp() {
 	scor=scor+1;
 	scorT.innerHtml=scor;
