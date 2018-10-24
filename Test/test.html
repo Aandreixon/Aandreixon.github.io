@@ -32,6 +32,7 @@ dbRef.on('value', snap => test.innerText = snap.val());
 //scor update
 var scorT=document.getElementById('scor');
 var dbRef2 = firebase.database().ref().child('scor');
+var scor;
 dbRef2.on('value', snap2 => scor.val());
 //var newPostKey = dbRef2.push().key;
 //var updates = {};
